@@ -1,16 +1,15 @@
 {
     "appKeys": {},
     "capabilities": [
-        ""
+        "configurable"
     ],
     "companyName": "michaeldvinci@gmail.com",
-    "longName": "Pebbaroo",
+    "longName": "PebbaRoo",
     "projectType": "pebblejs",
     "resources": {
         "media": [
             {
                 "file": "images/menu_icon.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
@@ -28,14 +27,30 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/appIcon.png",
+                "menuIcon": true,
+                "name": "IMAGES_APPICON_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/appIcon copy.png",
+                "name": "IMAGES_APPICON_COPY_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/appIcon2.png",
+                "name": "IMAGES_APPICON2_PNG",
+                "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
-    "shortName": "Pebbaroo",
+    "shortName": "PebbaRoo",
     "uuid": "52de3dad-22ae-44e1-b03a-caccd52c02af",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.2",
     "watchapp": {
         "watchface": false
     }
