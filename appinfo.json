@@ -1,7 +1,7 @@
 {
     "appKeys": {},
     "capabilities": [
-        "configurable"
+        ""
     ],
     "companyName": "michaeldvinci@gmail.com",
     "longName": "PebbaRoo",
@@ -54,7 +54,7 @@
     ],
     "uuid": "52de3dad-22ae-44e1-b03a-caccd52c02af",
     "versionCode": 1,
-    "versionLabel": "2.0",
+    "versionLabel": "3.2",
     "watchapp": {
         "hiddenApp": false,
         "watchface": false
