@@ -1,58 +1,64 @@
 var UI = require('ui');
 
-/// app setup
+//-- app setup --//
+
+
+var newMenu = [
+   {
+      title: "2015",
+      subtitle: "Schedule"
+   },
+   {
+      title: "2016",
+      subtitle: "Lineup"
+   }
+];
+
 var days = [
    {
       title: "Thursday",
-      subtitle: "Day 1"
+      subtitle: "Words"
    },
    {
       title: "Friday",
-      subtitle: "High-Five Friday"
+      subtitle: "Words"
    },
    {
       title: "Saturday",
-      subtitle: "ClusterQuack"
+      subtitle: "Words"
    },
    {
       title: "Sunday",
-      subtitle: "Final Day"
+      subtitle: "Words"
    }
 ];
 
-var daysMenu = new UI.Menu({
-   sections: [{
-      title: 'Bonnaroo 2015',
-      items: days
-   }]
-});
-
-daysMenu.show();
-
-var thursday = [
+var choices = [
    {
-      title: "This Tent"
+      title: "By Time"
    },
    {
-      title: "That Tent"
-   },
-   {
-      title: "The Other Tent"
-   },
-   {
-      title: "Silent Disco"
-   },
-   {
-      title: "Xmas Barn"
+      title: "By Location"
    }
 ];
 
-var thursdayMenu = new UI.Menu({
-   sections: [{
-      title: 'Thursday',
-      items: thursday
-   }]
-});
+var thurs = [
+   {
+      title: "Location 1"
+   },
+   {
+      title: "Location 2"
+   },
+   {
+      title: "Location 3"
+   },
+   {
+      title: "Location 4"
+   },
+   {
+      title: "Location 5"
+   }
+];
 
 var otherDay = [
    {
@@ -78,29 +84,7 @@ var otherDay = [
    }
 ];
 
-var fridayMenu = new UI.Menu({
-   sections: [{
-      title: 'Friday',
-      items: otherDay
-   }]
-});
-
-var saturdayMenu = new UI.Menu({
-   sections: [{
-      title: 'Saturday',
-      items: otherDay
-   }]
-});
-
-var sundayMenu = new UI.Menu({
-   sections: [{
-      title: 'Sunday',
-      items: otherDay
-   }]
-});
-
-//Thurs Sched
-var thursdayThis = [
+var thursThis = [
    {
       title: "Unlocking the Truth",
       subtitle: "545-630",
@@ -128,14 +112,7 @@ var thursdayThis = [
    }
 ];
 
-var thursdayThisMenu = new UI.Menu({
-   sections: [{
-      title: 'This Tent [Thurs]',
-      items: thursdayThis
-   }]
-});
-
-var thursdayThat = [
+var thursThat = [
    {
       title: "Dej Loaf",
       subtitle: "645-730"
@@ -158,14 +135,7 @@ var thursdayThat = [
    }
 ];
 
-var thursdayThatMenu = new UI.Menu({
-   sections: [{
-      title: 'That Tent [Thurs]',
-      items: thursdayThat
-   }]
-});
-
-var thursdayOther = [
+var thursOther = [
    {
       title: "DMA's",
       subtitle: "600-645"
@@ -192,14 +162,7 @@ var thursdayOther = [
    }
 ];
 
-var thursdayOtherMenu = new UI.Menu({
-   sections: [{
-      title: 'The Other Tent [Thurs]',
-      items: thursdayOther
-   }]
-});
-
-var thursdaySilent = [
+var thursSilent = [
    {
       title: "Quickie Mart",
       subtitle: "530-830"
@@ -218,14 +181,7 @@ var thursdaySilent = [
    }   
 ];
 
-var thursdaySilentMenu = new UI.Menu({
-   sections: [{
-      title: 'Silent Disco [Thurs]',
-      items: thursdaySilent
-   }]
-});
-
-var thursdayJake = [
+var thursJake = [
    {
       title: "Tiki Disco",
       subtitle: "400-630"
@@ -248,15 +204,7 @@ var thursdayJake = [
    }
 ];
 
-var thursdayJakeMenu = new UI.Menu({
-   sections: [{
-      title: 'Jake & Snake [Thurs]',
-      items: thursdayJake
-   }]
-});
-
-//Friday Sched
-var fridayWhat = [
+var friWhat = [
    {
       title: "SOJA",
       subtitle: "330-430"
@@ -279,14 +227,7 @@ var fridayWhat = [
    }
 ];
 
-var fridayWhatMenu = new UI.Menu({
-   sections: [{
-      title: 'What Stage [Fri]',
-      items: fridayWhat
-   }]
-});
-
-var fridayWhich = [
+var friWhich = [
    {
       title: "Brown Sabbath",
       subtitle: "200-300"
@@ -313,14 +254,7 @@ var fridayWhich = [
    }
 ];
 
-var fridayWhichMenu = new UI.Menu({
-   sections: [{
-      title: 'Which Stage [Fri]',
-      items: fridayWhich
-   }]
-});
-
-var fridayThis = [
+var friThis = [
    {
       title: "Tanya Tagaq",
       subtitle: "315-415"
@@ -347,14 +281,7 @@ var fridayThis = [
    }
 ];
 
-var fridayThisMenu = new UI.Menu({
-   sections: [{
-      title: 'This Tent [Fri]',
-      items: fridayThis
-   }]
-});
-
-var fridayThat = [
+var friThat = [
    {
       title: "Pallbearer",
       subtitle: "200-300"
@@ -381,14 +308,7 @@ var fridayThat = [
    }
 ];
 
-var fridayThatMenu = new UI.Menu({
-   sections: [{
-      title: 'That Tent [Fri]',
-      items: fridayThat
-   }]
-});
-
-var fridayOther = [
+var friOther = [
    {
       title: "The Districts",
       subtitle: "115-215"
@@ -415,14 +335,7 @@ var fridayOther = [
    }
 ];
 
-var fridayOtherMenu = new UI.Menu({
-   sections: [{
-      title: 'The Other Tent [Fri]',
-      items: fridayOther
-   }]
-});
-
-var fridaySilent = [
+var friSilent = [
    {
       title: "Motion Potion",
       subtitle: "430-630"
@@ -449,14 +362,7 @@ var fridaySilent = [
    }
 ];
 
-var fridaySilentMenu = new UI.Menu({
-   sections: [{
-      title: 'Silent Disco [Fri]',
-      items: fridaySilent
-   }]
-});
-
-var fridayJake = [
+var friJake = [
    {
       title: "Full Service Party",
       subtitle: "200-445"
@@ -491,15 +397,7 @@ var fridayJake = [
    }
 ];
 
-var fridayJakeMenu = new UI.Menu({
-   sections: [{
-      title: 'Xmas Barn [Fri]',
-      items: fridayJake
-   }]
-});
-
-//Sat Sched
-var saturdayWhat = [
+var satWhat = [
    {
       title: "Trampled by Turtles",
       subtitle: "330-445"
@@ -518,14 +416,7 @@ var saturdayWhat = [
    }
 ];
 
-var saturdayWhatMenu = new UI.Menu({
-   sections: [{
-      title: 'What Stage [Fri]',
-      items: saturdayWhat
-   }]
-});
-
-var saturdayWhich = [
+var satWhich = [
    {
       title: "Songhoy Blues",
       subtitle: "215-315"
@@ -552,14 +443,7 @@ var saturdayWhich = [
    }
 ];
 
-var saturdayWhichMenu = new UI.Menu({
-   sections: [{
-      title: 'Which Stage [Fri]',
-      items: saturdayWhich
-   }]
-});
-
-var saturdayThis = [
+var satThis = [
    {
       title: "Priory",
       subtitle: "1230-130"
@@ -590,17 +474,10 @@ var saturdayThis = [
    }
 ];
 
-var saturdayThisMenu = new UI.Menu({
-   sections: [{
-      title: 'This Tent [Fri]',
-      items: saturdayThis
-   }]
-});
-
-var saturdayThat = [
+var satThat = [
    {
       title: "Jon Cleary",
-      subtitle: ""
+      subtitle: "1230-145"
    },
    {
       title: "Gregory Alan Isakov",
@@ -628,14 +505,7 @@ var saturdayThat = [
    }
 ];
 
-var saturdayThatMenu = new UI.Menu({
-   sections: [{
-      title: 'That Tent [Fri]',
-      items: saturdayThat
-   }]
-});
-
-var saturdayOther = [
+var satOther = [
    {
       title: "So Percussion",
       subtitle: "1245-145"
@@ -662,14 +532,7 @@ var saturdayOther = [
    }
 ];
 
-var saturdayOtherMenu = new UI.Menu({
-   sections: [{
-      title: 'The Other Tent [Fri]',
-      items: saturdayOther
-   }]
-});
-
-var saturdaySilent = [,
+var satSilent = [,
    {
       title: "E.Feld",
       subtitle: "330-500"
@@ -708,14 +571,7 @@ var saturdaySilent = [,
    }
 ];
 
-var saturdaySilentMenu = new UI.Menu({
-   sections: [{
-      title: 'Silent Disco [Fri]',
-      items: saturdaySilent
-   }]
-});
-
-var saturdayJake = [
+var satJake = [
    {
       title: "Full Service Party",
       subtitle: "200-500"
@@ -746,15 +602,7 @@ var saturdayJake = [
    }
 ];
 
-var saturdayJakeMenu = new UI.Menu({
-   sections: [{
-      title: 'Xmas Barn [Fri]',
-      items: saturdayJake
-   }]
-});
-
-//Sun Sched
-var sundayWhat = [
+var sunWhat = [
    {
       title: "Twenty One Pilots",
       subtitle: "230-345"
@@ -773,14 +621,7 @@ var sundayWhat = [
    }
 ];
 
-var sundayWhatMenu = new UI.Menu({
-   sections: [{
-      title: 'What Stage [Fri]',
-      items: sundayWhat
-   }]
-});
-
-var sundayWhich = [
+var sunWhich = [
    {
       title: "Pokey Laforge",
       subtitle: "1215-115"
@@ -803,14 +644,7 @@ var sundayWhich = [
    }
 ];
 
-var sundayWhichMenu = new UI.Menu({
-   sections: [{
-      title: 'Which Stage [Fri]',
-      items: sundayWhich
-   }]
-});
-
-var sundayThis = [
+var sunThis = [
    {
       title: "Christopher Denny",
       subtitle: "1245-200"
@@ -833,14 +667,7 @@ var sundayThis = [
    }
 ];
 
-var sundayThisMenu = new UI.Menu({
-   sections: [{
-      title: 'This Tent [Fri]',
-      items: sundayThis
-   }]
-});
-
-var sundayThat = [,
+var sunThat = [,
    {
       title: "Shakey Graves",
       subtitle: "1230-115"
@@ -867,14 +694,7 @@ var sundayThat = [,
    }
 ];
 
-var sundayThatMenu = new UI.Menu({
-   sections: [{
-      title: 'That Tent [Fri]',
-      items: sundayThat
-   }]
-});
-
-var sundayOther = [
+var sunOther = [
    {
       title: "Jessica Hernandez",
       subtitle: "115-215"
@@ -897,28 +717,14 @@ var sundayOther = [
    }
 ];
 
-var sundayOtherMenu = new UI.Menu({
-   sections: [{
-      title: 'The Other Tent [Fri]',
-      items: sundayOther
-   }]
-});
-
-var sundaySilent = [
+var sunSilent = [
    {
       title: "DJ Logic",
       subtitle: "500-800"
    }
 ];
 
-var sundaySilentMenu = new UI.Menu({
-   sections: [{
-      title: 'Silent Disco [Fri]',
-      items: sundaySilent
-   }]
-});
-
-var sundayJake = [
+var sunJake = [
    {
       title: "Full Service Party",
       subtitle: "400-500"
@@ -937,175 +743,1162 @@ var sundayJake = [
    }
 ];
 
-var sundayJakeMenu = new UI.Menu({
+
+//-- menu creation --//
+var newMenuMenu = new UI.Menu({
    sections: [{
-      title: 'Xmas Barn [Fri]',
-      items: sundayJake
+      title: 'which?',
+      items: newMenu
    }]
 });
 
-daysMenu.on('select', function(e) {
+
+var daysMenu = new UI.Menu({
+   sections: [{
+      title: 'conedMiros App',
+      items: days
+   }]
+});
+
+var thursChoices = new UI.Menu({
+   sections: [{
+      title: 'Order By:',
+      items: choices
+   }]
+});
+
+var friChoices = new UI.Menu({
+   sections: [{
+      title: 'Order By:',
+      items: choices
+   }]
+});
+
+var satChoices = new UI.Menu({
+   sections: [{
+      title: 'Order By:',
+      items: choices
+   }]
+});
+
+var sunChoices = new UI.Menu({
+   sections: [{
+      title: 'Order By:',
+      items: choices
+   }]
+});
+
+var thursStageMenu = new UI.Menu({
+   sections: [{
+      title: 'Thursday',
+      items: thurs
+   }]
+});
+
+var friStageMenu = new UI.Menu({
+   sections: [{
+      title: 'Friday',
+      items: otherDay
+   }]
+});
+
+var satStageMenu = new UI.Menu({
+   sections: [{
+      title: 'Saurday',
+      items: otherDay
+   }]
+});
+
+var sunStageMenu = new UI.Menu({
+   sections: [{
+      title: 'Sunday',
+      items: otherDay
+   }]
+});
+
+var thursJakeMenu = new UI.Menu({
+   sections: [{
+      title: 'Jake & Snake [Thurs]',
+      items: thursJake
+   }]
+});
+
+var thursSilentMenu = new UI.Menu({
+   sections: [{
+      title: 'Silent Disco [Thurs]',
+      items: thursSilent
+   }]
+});
+
+var thursOtherMenu = new UI.Menu({
+   sections: [{
+      title: 'The Other Tent [Thurs]',
+      items: thursOther
+   }]
+});
+
+var thursThatMenu = new UI.Menu({
+   sections: [{
+      title: 'That Tent [Thurs]',
+      items: thursThat
+   }]
+});
+
+var thursThisMenu = new UI.Menu({
+   sections: [{
+      title: 'This Tent [Thurs]',
+      items: thursThis
+   }]
+});
+
+var friJakeMenu = new UI.Menu({
+   sections: [{
+      title: 'Xmas Barn [Fri]',
+      items: friJake
+   }]
+});
+
+var friSilentMenu = new UI.Menu({
+   sections: [{
+      title: 'Silent Disco [Fri]',
+      items: friSilent
+   }]
+});
+
+var friOtherMenu = new UI.Menu({
+   sections: [{
+      title: 'The Other Tent [Fri]',
+      items: friOther
+   }]
+});
+
+var friThatMenu = new UI.Menu({
+   sections: [{
+      title: 'That Tent [Fri]',
+      items: friThat
+   }]
+});
+
+var friThisMenu = new UI.Menu({
+   sections: [{
+      title: 'This Tent [Fri]',
+      items: friThis
+   }]
+});
+
+var friWhichMenu = new UI.Menu({
+   sections: [{
+      title: 'Which Stage [Fri]',
+      items: friWhich
+   }]
+});
+
+var friWhatMenu = new UI.Menu({
+   sections: [{
+      title: 'What Stage [Fri]',
+      items: friWhat
+   }]
+});
+
+var satJakeMenu = new UI.Menu({
+   sections: [{
+      title: 'Xmas Barn [Sat]',
+      items: satJake
+   }]
+});
+
+var satSilentMenu = new UI.Menu({
+   sections: [{
+      title: 'Silent Disco [Sat]',
+      items: satSilent
+   }]
+});
+
+var satOtherMenu = new UI.Menu({
+   sections: [{
+      title: 'The Other Tent [Sat]',
+      items: satOther
+   }]
+});
+
+var satThatMenu = new UI.Menu({
+   sections: [{
+      title: 'That Tent [Sat]',
+      items: satThat
+   }]
+});
+
+var satThisMenu = new UI.Menu({
+   sections: [{
+      title: 'This Tent [Sat]',
+      items: satThis
+   }]
+});
+
+var satWhichMenu = new UI.Menu({
+   sections: [{
+      title: 'Which Stage [Sat]',
+      items: satWhich
+   }]
+});
+
+var satWhatMenu = new UI.Menu({
+   sections: [{
+      title: 'What Stage [Sat]',
+      items: satWhat
+   }]
+});
+
+var sunWhatMenu = new UI.Menu({
+   sections: [{
+      title: 'What Stage [Sun]',
+      items: sunWhat
+   }]
+});
+
+var sunWhichMenu = new UI.Menu({
+   sections: [{
+      title: 'Which Stage [Sun]',
+      items: sunWhich
+   }]
+});
+
+var sunThisMenu = new UI.Menu({
+   sections: [{
+      title: 'This Tent [Sun]',
+      items: sunThis
+   }]
+});
+
+var sunThatMenu = new UI.Menu({
+   sections: [{
+      title: 'That Tent [Sun]',
+      items: sunThat
+   }]
+});
+
+var sunOtherMenu = new UI.Menu({
+   sections: [{
+      title: 'The Other Tent [Sun]',
+      items: sunOther
+   }]
+});
+
+var sunSilentMenu = new UI.Menu({
+   sections: [{
+      title: 'Silent Disco [Sun]',
+      items: sunSilent
+   }]
+});
+
+var sunJakeMenu = new UI.Menu({
+   sections: [{
+      title: 'Xmas Barn [Sun]',
+      items: sunJake
+   }]
+});
+
+var thursTimeMenu = new UI.Menu({
+   sections: [{
+      title: '4:00',
+      items: [{
+            title: 'Tiki Disco',
+         subtitle: '400-630 : XMas Barn'
+      }]
+   },{
+      title: '5:00',
+      items: [{
+            title: 'Quickie Mart',
+         subtitle: '530-830 : Silent Disco'
+      }, {
+            title: 'Unlocking the Truth',
+         subtitle: '545-630 : This Tent'
+      }]
+   },{
+      title: '6:00',
+      items: [{
+            title: "DMA's",
+         subtitle: '600-645 : Other Tent'
+      }, {
+            title: "Dej Loaf",
+         subtitle: "645-730: That Tent"
+      }]
+   },{
+      title: '7:00',
+      items: [{
+            title: "Strand of Oaks",
+         subtitle: "700-745 : This Tent"
+      }, {
+            title: "New Breed Brass Band",
+         subtitle: "700-800: XMas Barn"
+      }, {
+            title: "Ryan Weaver",
+         subtitle: "715-800: Other Tent"
+      }]
+   },{
+      title: '8:00',
+      items: [{
+            title: "Dopapod",
+         subtitle: "800-845: That Tent"
+      }, {
+            title: "Full Service Party",
+         subtitle: "815-1230: XMas Barn"
+      }, {
+            title: "Iceage",
+         subtitle: "815-900: This Tent"
+      }, {
+            title: "Full Service Party",
+         subtitle: "815-1230: XMas Barn"
+      }, {
+            title: "Temples",
+         subtitle: "830-915: Other Tent"
+      }, {
+            title: "The Unsheathed",
+         subtitle: "830-1030: Silent Disco"
+      }]
+   },{
+      title: '9:00',
+      items: [{
+            title: "Houndmouth",
+         subtitle: "915-1000: That Tent"
+      }, {
+            title: "The Growlers",
+         subtitle: "930-1015: This Tent"
+      }, {
+            title: "Glass Animals",
+         subtitle: "945-1030: Other Tent"
+      }]
+   },{
+      title: '10:00',
+      items: [{
+            title: "Tove Lo",
+         subtitle: "1030-1130: That Tent"
+      }, {
+            title: "Matoma",
+         subtitle: "1030-1200: Silent Disco"
+      }, {
+            title: "Courtney Barnett",
+         subtitle: "1045-1130: This Tent"
+      }]
+   },{
+      title: '11:00',
+      items: [{
+            title: "Benjamin Booker",
+         subtitle: "1100-1145: Other Tent"
+      }]
+   },{
+      title: '12:00',
+      items: [{
+            title: "Jungle",
+         subtitle: "1200-100: That Tent"
+      }, {
+            title: "Quickie Mart",
+         subtitle: "1200-200: Silent Disco"
+      }, {
+            title: "Mac Demarco",
+         subtitle: "1215-100: This Tent"
+      }, {
+            title: "Gramatik",
+         subtitle: "1215-115: Other Tent"
+      }]
+   },{
+      title: '1:00',
+      items: [{
+            title: "SnickleFritz",
+         subtitle: "100-200: XMas Barn"
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "Tiki Disco",
+         subtitle: "230-600: XMas Barn"
+      }]
+   }]
+});
+
+var friTimeMenu = new UI.Menu({
+   sections: [{
+      title: '1:00',
+      items: [{
+            title: "The Districts",
+         subtitle: "115-215: Other Tent"
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "Brown Sabbath",
+         subtitle: "200-300: Which Stage"
+      }, {
+            title: "Pallbearer",
+         subtitle: "200-300: That Tent"
+      }, {
+            title: "Full Service Party",
+         subtitle: "200-445: XMas Barn"
+      }]
+   },{
+      title: '3:00',
+      items: [{
+            title: "King Gizzard and the Lizard Wizard",
+         subtitle: "300-400: Other Tent"
+      }, {
+            title: "Tanya Tagaq",
+         subtitle: "315-415: This Tent"
+      }, {
+            title: "SOJA",
+         subtitle: "330-430: What Stage"
+      }, {
+            title: "Royal Blood",
+         subtitle: "345-445: Which Stage"
+      }, {
+            title: "Between the Buried & Me",
+         subtitle: "345-445: That Tent"
+      }]
+   },{
+      title: '4:00',
+      items: [{
+            title: "Motion Potion",
+         subtitle: "430-630: Silent Disco"
+      }, {
+            title: "Unknown Mortal Orchestra",
+         subtitle: "445-545: Other Tent"
+      }]
+   },{
+      title: '5:00',
+      items: [{
+            title: "Against Me!",
+         subtitle: "500-600: This Tent"
+      }, {
+            title: "New Breed Brass Band",
+         subtitle: "500-600: XMas Barn"
+      }, {
+            title: "Dawes",
+         subtitle: "530-630: What Stage"
+      }, {
+            title: "Moon Taxi",
+         subtitle: "530-630: Which Stage"
+      }, {
+            title: "Rustie",
+         subtitle: "530-630: That Tent"
+      }]
+   },{
+      title: '6:00',
+      items: [{
+            title: "Full Service Party",
+         subtitle: "615-900: XMas Barn"
+      }, {
+            title: "Sylvan Esso",
+         subtitle: "630-730: Other Tent"
+      }, {
+            title: "Attom",
+         subtitle: "630-830: Silent Disco"
+      }, {
+            title: "Guster",
+         subtitle: "645-745: This Tent"
+      }]
+   },{
+      title: '7:00',
+      items: [{
+            title: "Kacey Musgraves",
+         subtitle: "715-830: That Tent"
+      }, {
+            title: "Atmosphere",
+         subtitle: "715-815: Which Stage"
+      }, {
+            title: "Alabama Shakes",
+         subtitle: "730-845: What Stage"
+      }]
+   },{
+      title: '8:00',
+      items: [{
+            title: "Ben Folds & yMusic",
+         subtitle: "815-930: Other Tent"
+      }, {
+            title: "Tears for Fears",
+         subtitle: "830-945: This Tent"
+      }]
+   },{
+      title: '9:00',
+      items: [{
+            title: "Ben Harper",
+         subtitle: "915-1030: Which Stage"
+      }, {
+            title: "Kendrick Lamar",
+         subtitle: "945-1100: What Stage"
+      }]
+   },{
+      title: '10:00',
+      items: [{
+            title: "Motion Potion",
+         subtitle: "1030-1230: Silent Disco"
+      }]
+   },{
+      title: '11:00',
+      items: [{
+            title: "MSMW",
+         subtitle: "1100-1215: That Tent"
+      }, {
+            title: "Full Service Party",
+         subtitle: "1100-100: XMas Barn"
+      }, {
+            title: "Run the Jewels",
+         subtitle: "1115-1215: This Tent"
+      }, {
+            title: "Earth, Wind & Fire",
+         subtitle: "1130-1245: Which Stage"
+      }]
+   },{
+      title: '12:00',
+      items: [{
+            title: "Deadmau5",
+         subtitle: "1200-130: What Stage"
+      }, {
+            title: "Flying Lotus",
+         subtitle: "1215-145: Other Tent"
+      }, {
+            title: "Matoma",
+         subtitle: "1230-200: Silent Disco"
+      }]
+   },{
+      title: '1:00',
+      items: [{
+            title: "Odesza",
+         subtitle: "100-215: This Tent"
+      }, {
+            title: "Jon Cleary",
+         subtitle: "130-230: XMas Barn"
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "STS9",
+         subtitle: "200-330: That Tent"
+      }, {
+            title: "DJ Prince Hakim",
+         subtitle: "200-400: Silent Disco"
+      }]
+   },{
+      title: '3:00',
+      items: [{
+            title: "Tiki Disco",
+         subtitle: "300-400: XMas Barn"
+      }]
+   },{
+      title: '4:00',
+      items: [{
+            title: "Tropical Party",
+         subtitle: "400-500: XMas Barn"
+      }]
+   },{
+      title: '5:00',
+      items: [{
+            title: "Tiki Disco",
+         subtitle: "500-600: XMas Barn"
+      }]
+   }]
+});
+
+var satTimeMenu = new UI.Menu({
+   sections: [{
+      title: '12:00',
+      items: [{
+            title: "Priory",
+         subtitle: "1230-130: This Tent"
+   }, {
+            title: "Jon Cleary",
+         subtitle: "1230-145: That Tent"
+   }, {
+            title: "So Percussion",
+         subtitle: "1245-145: Other Tent"
+      }]
+   },{
+      title: '1:00',
+      items: [{
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "Catfish & the Bottlemen",
+         subtitle: "200-300: This Tent"
+      }, {
+            title: "Full Service Party",
+         subtitle: "200-500: XMas Barn"
+      }, {
+            title: "Songhoy Blues",
+         subtitle: "215-315: Which Stage"
+      }, {  
+            title: "Gregory Alan Isakov",
+         subtitle: "230-330: That Tent"
+      }, {
+            title: "Phox",
+         subtitle: "230-330: Other Tent"
+      }]
+   },{
+      title: '3:00',
+      items: [{
+            title: "Trampled by Turtles",
+         subtitle: "330-445: What Stage"
+      }, {
+            title: "E.Feld",
+         subtitle: "330-500: Silent Disco"
+      }, {
+            title: "Woods",
+         subtitle: "345-445: This Tent"
+      }]
+   },{
+      title: '4:00',
+      items: [{
+            title: "Rhiannon Giddens",
+         subtitle: "400-500: Which Stage"
+      }, {
+            title: "Bahamas",
+         subtitle: "415-530: That Tent"
+      }, {
+            title: "SZA",
+         subtitle: "415-515: Other Tent"
+      }]
+   },{
+      title: '5:00',
+      items: [{
+            title: "SnickleFritz",
+         subtitle: "500-700: Silent Disco"
+      }, {
+            title: "Nola Bounce Party",
+         subtitle: "500-600: XMas Barn"
+      }, {
+            title: "Bleachers",
+         subtitle: "515-630: This Tent"
+      }, {
+            title: "Hozier",
+         subtitle: "545-700: What Stage"
+      }, {
+            title: "The War on Drugs",
+         subtitle: "545-645: Which Stage"
+      }]
+   },{
+      title: '6:00',
+      items: [{
+            title: "Full Service Party",
+         subtitle: "600-900: XMas Barn"
+      }, {
+            title: "Jamie XX",
+         subtitle: "600-730: Other Tent"
+      }, {
+            title: "Sturgill Simpson",
+         subtitle: "615-730: That Tent"
+      }]
+   },{
+      title: '7:00',
+      items: [{
+            title: "Belle & Sebastian",
+         subtitle: "700-815: This Tent"
+      }, {
+            title: "Tiki Disco: Silent Disco",
+         subtitle: "700-1000: Silent Disco"
+      }, {
+            title: "Gary Clark Jr.",
+         subtitle: "730-830: Which Stage"
+      }]
+   },{
+      title: '8:00',
+      items: [{
+            title: "My Morning Jacket",
+         subtitle: "800-1000: What Stage"
+      }, {
+            title: "SBTRKT",
+         subtitle: "800-930: Other Tent"
+      }, {
+            title: "Atomic Bomb!",
+         subtitle: "815-930: That Tent"
+      }]
+   },{
+      title: '9:00',
+      items: [{
+            title: "Childish Gambino",
+         subtitle: "915-1030: Which Stage"
+      }]
+   },{
+      title: '10:00',
+      items: [{
+            title: "Mumford & Sons",
+         subtitle: "1100-100: What Stage"
+      }]
+   },{
+      title: '11:00',
+      items: [{
+            title: "DJ Logic",
+         subtitle: "1100-1200: Silent Disco"
+      }, {
+            title: "Full Service Party",
+         subtitle: "1100-100: XMas Barn"
+      }]
+   },{
+      title: '12:00',
+      items: [{
+            title: "Slayer",
+         subtitle: "1200-115: This Tent"
+      }, {
+            title: "Tycho",
+         subtitle: "1200-115: That Tent"
+      }, {
+            title: "Different Sleep",
+         subtitle: "1200-1245: Silent Disco"
+      }, {
+            title: "Nuri",
+         subtitle: "1245-130: Silent Disco"
+      }]
+   },{
+      title: '1:00',
+      items: [{
+            title: "Bassnectar",
+         subtitle: "100-215: Which Stage"
+      }, {
+            title: "Vogue Dance Off",
+         subtitle: "100-200: XMas Barn"
+      }, {
+            title: "Superjam",
+         subtitle: "130-300: Other Tent"
+      }, {
+            title: "Childish Major",
+         subtitle: "130-215: Silent Disco"
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "D'Angelo",
+         subtitle: "200-330: This Tent"
+      }, {
+            title: "Flume",
+         subtitle: "200-315: That Tent"
+      }, {
+            title: "El Dusty",
+         subtitle: "215-300: Silent Disco"
+      }]
+   },{
+      title: '3:00',
+      items: [{
+            title: "Mike Gao",
+         subtitle: "300-400: Silent Disco"
+      }, {
+            title: "Robe Rage",
+         subtitle: "300-400: XMas Barn"
+      }]
+   },{
+      title: '4:00',
+      items: [{
+            title: "90's Rave",
+         subtitle: "400-600: XMas Barn"
+      }]
+   }]
+});
+
+var sunTimeMenu = new UI.Menu({
+   sections: [{
+      title: '12:00',
+      items: [{
+            title: "Pokey Laforge",
+         subtitle: "1215-115: Which Stage"
+      }, {
+            title: "Shakey Graves",
+         subtitle: "1230-115: That Tent"
+      }, {
+            title: "Christopher Denny",
+         subtitle: "1245-200: This Tent"
+      }]
+   },{
+      title: '1:00',
+      items: [{
+            title: "Jessica Hernandez",
+         subtitle: "115-215: Other Tent"
+      }, {
+            title: "Hurray for Riff Raff",
+         subtitle: "145-230: That Tent"
+      }]
+   },{
+      title: '2:00',
+      items: [{
+            title: "Madisen Ward",
+         subtitle: "200-300: Which Stage"
+      }, {
+            title: "Twenty One Pilots",
+         subtitle: "230-345: What Stage"
+      }, {
+            title: "His Golden Messenger",
+         subtitle: "230-345: This Tent"
+      }, {
+            title: "Shabazz Palaces",
+         subtitle: "245-345: Other Tent"
+      }]
+   },{
+      title: '3:00',
+      items: [{
+            title: "Bela Fleck",
+         subtitle: "300-400: That Tent"
+      }, {
+            title: "Awolnation",
+         subtitle: "345-500: Which Stage"
+      }]
+   },{
+      title: '4:00',
+      items: [{
+            title: "Full Service Party",
+         subtitle: "400-500: XMas Barn"
+      }, {
+            title: "MO",
+         subtitle: "415-515: Other Tent"
+      }, {
+            title: "The Very Best",
+         subtitle: "415-515: This Tent"
+      }, {
+            title: "Spoon",
+         subtitle: "445-600: What Stage"
+      }, {
+            title: "Jerry Douglas",
+         subtitle: "445-545: That Tent"
+      }]
+   },{
+      title: '5:00',
+      items: [{
+            title: "DJ Logic",
+         subtitle: "500-800: Silent Disco"
+      }, {
+            title: "Hip Hop Party",
+         subtitle: "500-600: XMas Barn"
+      }, {
+            title: "Brandi Carlile",
+         subtitle: "545-700: Which Stage"
+      }, {
+            title: "Freddie Gibbs & Madlib",
+         subtitle: "545-645: Other Tent"
+      }]
+   },{
+      title: '6:00',
+      items: [{
+            title: "Rudimental",
+         subtitle: "600-715: This Tent"
+      }, {
+            title: "Reggae Party",
+         subtitle: "600-700: XMas Barn"
+      }, {
+            title: "Punch Brothers",
+         subtitle: "630-730: That Tent"
+      }]
+   },{
+      title: '7:00',
+      items: [{
+            title: "Full Service Party",
+         subtitle: "700-900: XMas Barn"
+      }, {
+            title: "Florence + the Machine",
+         subtitle: "700-800: What Stage"
+      }, {
+         title: "Caribou",
+         subtitle: "730-845: Other Tent"
+      }, {
+            title: "Robert Plant",
+         subtitle: "745-900: Which Stage"
+      }]
+   },{
+      title: '8:00',
+      items: [{
+            title: "G-Eazy",
+         subtitle: "800-900: This Tent"
+      }, {
+            title: "Bluegrass Superjam",
+         subtitle: "800-900: That Tent"
+      }]
+   },{
+      title: '9:00',
+      items: [{
+            title: "Billy Joel",
+         subtitle: "900-1130: What Stage"
+      }]
+   }]
+});
+
+var newLineup = new UI.Menu({
+   sections: [{
+      title: '2016 Lineup',
+      items: [{
+            title: "Pearl Jam",
+      }, {
+            title: "Dead & Co.",
+      }, {
+            title: "LCD Soundsystem",
+      }, {
+            title: "J. Cole",
+      }, {
+            title: "Ellie Goulding",
+      }, {
+            title: "Macklemore",
+      }, {
+            title: "Tame Impala",
+      }, {
+            title: "Death Cab for Cutie",
+      }, {
+            title: "M83",
+      }, {
+            title: "HAIM",
+      }, {
+            title: "Halsey",
+      }, {
+            title: "Ween",
+      }, {
+            title: "Jason Isbell",
+      }, {
+            title: "CHVRCHES",
+      }, {
+            title: "Miguel",
+      }, {
+            title: "Chris Stapleson",
+      }, {
+            title: "Judd Apatow & Friends",
+      }, {
+            title: "The Chainsmokers",
+      }, {
+            title: "Superjam",
+      }, {
+            title: "Big Grams",
+      }, {
+            title: "Band of Horses",
+      }, {
+            title: "Leon Bridges",
+      }, {
+            title: "Grace Potter",
+      }, {
+            title: "Father John Misty",
+      }, {
+            title: "Adam Devine",
+      }, {
+            title: "Purity Ring",
+      }, {
+            title: "The Claypool Lennon Delirium",
+      }, {
+            title: "Two Door Cinema Club",
+      }, {
+            title: "Sam Hunt",
+      }, {
+            title: "Flosstradaumus",
+      }, {
+            title: "Zeds Dead",
+      }, {
+            title: "Adventure Club",
+      }, {
+            title: "Tyler The Creator",
+      }, {
+            title: "Bridget Everett",
+      }, {
+            title: "Griz",
+      }, {
+            title: "Mavis Staples",
+      }, {
+            title: "TouchPants",
+      }, {
+            title: "Kurt Vile & the Violators",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }, {
+            title: "",
+      }
+      ]
+   }]
+});
+
+//-- menu selection --//
+newMenuMenu.on('select', function(e) {
    if (e.itemIndex == 0) {
-      thursdayMenu.show(); 
+      daysMenu.show();
    }
    if (e.itemIndex == 1) {
-      fridayMenu.show(); 
+      newLineup.show();
+   }
+});
+
+
+daysMenu.on('select', function(e) {
+   if (e.itemIndex == 0) {
+      thursChoices.show(); 
+   }
+   if (e.itemIndex == 1) {
+      friChoices.show(); 
    }
    if (e.itemIndex == 2) {
-      saturdayMenu.show(); 
+      satChoices.show(); 
    }
    if (e.itemIndex == 3) {
-      sundayMenu.show(); 
+      sunChoices.show(); 
    }
 });
 
-thursdayMenu.on('select', function(f) {
+thursChoices.on('select', function(e) {
+   if (e.itemIndex == 0) {
+      thursTimeMenu.show();
+   }
+   if (e.itemIndex == 1) {
+      thursStageMenu.show();
+   }
+});
+
+friChoices.on('select', function(e) {
+   if (e.itemIndex == 0) {
+      friTimeMenu.show();
+   }
+   if (e.itemIndex == 1) {
+      friStageMenu.show();
+   }
+});
+
+satChoices.on('select', function(e) {
+   if (e.itemIndex == 0) {
+      satTimeMenu.show();
+   }
+   if (e.itemIndex == 1) {
+      satStageMenu.show();
+   }
+});
+
+sunChoices.on('select', function(e) {
+   if (e.itemIndex == 0) {
+      sunTimeMenu.show();
+   }
+   if (e.itemIndex == 1) {
+      sunStageMenu.show();
+   }
+});
+
+thursStageMenu.on('select', function(f) {
    if (f.itemIndex == 0) {
-      thursdayThisMenu.show();
+      thursThisMenu.show();
    }
    if (f.itemIndex == 1) {
-      thursdayThatMenu.show();
+      thursThatMenu.show();
    }
    if (f.itemIndex == 2) {
-      thursdayOtherMenu.show();
+      thursOtherMenu.show();
    }
    if (f.itemIndex == 3) {
-      thursdaySilentMenu.show();
+      thursSilentMenu.show();
    }
    if (f.itemIndex == 4) {
-      thursdayJakeMenu.show();
+      thursJakeMenu.show();
    }
 });
 
-fridayMenu.on('select', function(g) {
+friStageMenu.on('select', function(g) {
    if (g.itemIndex == 0) {
-      fridayWhatMenu.show();
+      friWhatMenu.show();
    }
    if (g.itemIndex == 1) {
-      fridayWhichMenu.show();
+      friWhichMenu.show();
    }
    if (g.itemIndex == 2) {
-      fridayThisMenu.show();
+      friThisMenu.show();
    }
    if (g.itemIndex == 3) {
-      fridayThatMenu.show();
+      friThatMenu.show();
    }
    if (g.itemIndex == 4) {
-      fridayOtherMenu.show();
+      friOtherMenu.show();
    }
    if (g.itemIndex == 5) {
-      fridaySilentMenu.show();
+      friSilentMenu.show();
    }
    if (g.itemIndex == 6) {
-      fridayJakeMenu.show();
+      friJakeMenu.show();
    }
 });
 
-saturdayMenu.on('select', function(g) {
+satStageMenu.on('select', function(g) {
    if (g.itemIndex == 0) {
-      saturdayWhatMenu.show();
+      satWhatMenu.show();
    }
    if (g.itemIndex == 1) {
-      saturdayWhichMenu.show();
+      satWhichMenu.show();
    }
    if (g.itemIndex == 2) {
-      saturdayThisMenu.show();
+      satThisMenu.show();
    }
    if (g.itemIndex == 3) {
-      saturdayThatMenu.show();
+      satThatMenu.show();
    }
    if (g.itemIndex == 4) {
-      saturdayOtherMenu.show();
+      satOtherMenu.show();
    }
    if (g.itemIndex == 5) {
-      saturdaySilentMenu.show();
+      satSilentMenu.show();
    }
    if (g.itemIndex == 6) {
-      saturdayJakeMenu.show();
+      satJakeMenu.show();
    }
 });
 
-sundayMenu.on('select', function(g) {
+sunStageMenu.on('select', function(g) {
    if (g.itemIndex == 0) {
-      sundayWhatMenu.show();
+      sunWhatMenu.show();
    }
    if (g.itemIndex == 1) {
-      sundayWhichMenu.show();
+      sunWhichMenu.show();
    }
    if (g.itemIndex == 2) {
-      sundayThisMenu.show();
+      sunThisMenu.show();
    }
    if (g.itemIndex == 3) {
-      sundayThatMenu.show();
+      sunThatMenu.show();
    }
    if (g.itemIndex == 4) {
-      sundayOtherMenu.show();
+      sunOtherMenu.show();
    }
    if (g.itemIndex == 5) {
-      sundaySilentMenu.show();
+      sunSilentMenu.show();
    }
    if (g.itemIndex == 6) {
-      sundayJakeMenu.show();
+      sunJakeMenu.show();
    }
 });
 
-///config setup
-var mConfig = {};
 
-Pebble.addEventListener("ready", function(e) {
-  loadLocalData();
-  returnConfigToPebble();
-});
-
+//-- config setup --//
 Pebble.addEventListener("showConfiguration", function(e) {
-	Pebble.openURL(mConfig.configureUrl);
+   Pebble.openURL("");
 });
 
-Pebble.addEventListener("webviewclosed",
-  function(e) {
-    if (e.response) {
-      var config = JSON.parse(e.response);
-      saveLocalData(config);
-      returnConfigToPebble();
-    }
-  }
-);
 
-function saveLocalData(config) {
-
-  //console.log("loadLocalData() " + JSON.stringify(config));
-
-  localStorage.setItem("invert", parseInt(config.invert)); 
-  localStorage.setItem("bluetoothvibe", parseInt(config.bluetoothvibe)); 
-  localStorage.setItem("hourlyvibe", parseInt(config.hourlyvibe)); 
-  
-  loadLocalData();
-
-}
-function loadLocalData() {
-  
-	mConfig.invert = parseInt(localStorage.getItem("invert"));
-	mConfig.bluetoothvibe = parseInt(localStorage.getItem("bluetoothvibe"));
-	mConfig.hourlyvibe = parseInt(localStorage.getItem("hourlyvibe"));
-	mConfig.configureUrl = "http://michaeldvinci.com/pebbaroo/pebbaroo-config.html";
-
-	if(isNaN(mConfig.invert)) {
-		mConfig.invert = 0;
-	}
-	if(isNaN(mConfig.bluetoothvibe)) {
-		mConfig.bluetoothvibe = 0;
-	}
-	if(isNaN(mConfig.hourlyvibe)) {
-		mConfig.hourlyvibe = 0;
-	}   
-
-  //console.log("loadLocalData() " + JSON.stringify(mConfig));
-}
-function returnConfigToPebble() {
-  //console.log("Configuration window returned: " + JSON.stringify(mConfig));
-  Pebble.sendAppMessage({
-    "invert":parseInt(mConfig.invert), 
-    "bluetoothvibe":parseInt(mConfig.bluetoothvibe), 
-    "hourlyvibe":parseInt(mConfig.hourlyvibe)
-  });    
-}
+//-- start app --//
+newMenuMenu.show();

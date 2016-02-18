@@ -11,17 +11,17 @@
             {
                 "file": "images/menu_icon.png",
                 "name": "IMAGE_MENU_ICON",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/logo_splash.png",
                 "name": "IMAGE_LOGO_SPLASH",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/tile_splash.png",
                 "name": "IMAGE_TILE_SPLASH",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "fonts/UbuntuMono-Regular.ttf",
@@ -32,26 +32,31 @@
                 "file": "images/appIcon.png",
                 "menuIcon": true,
                 "name": "IMAGES_APPICON_PNG",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/appIcon copy.png",
                 "name": "IMAGES_APPICON_COPY_PNG",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/appIcon2.png",
                 "name": "IMAGES_APPICON2_PNG",
-                "type": "png"
+                "type": "bitmap"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "PebbaRoo",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
     "uuid": "52de3dad-22ae-44e1-b03a-caccd52c02af",
     "versionCode": 1,
-    "versionLabel": "1.2",
+    "versionLabel": "2.0",
     "watchapp": {
+        "hiddenApp": false,
         "watchface": false
     }
 }
